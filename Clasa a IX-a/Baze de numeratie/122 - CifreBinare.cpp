@@ -1,6 +1,8 @@
 #include<iostream>
 #include<cmath>
 
+//yes
+
 using namespace std;
 
 int main() {
