@@ -1,3 +1,4 @@
+//78
 void citmat(int a[][100], int& n, int& m){
     cin >> n >> m;
     for(int i = 0; i < n; ++i) {
