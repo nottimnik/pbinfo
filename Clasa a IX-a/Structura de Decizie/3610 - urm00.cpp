@@ -1,11 +1,25 @@
 #include<iostream>
+
 using namespace std;
+
 int main() {
-    int n;
-    cin >> n;
-    while (n % 10 != (n / 10) % 10 || n % 10 !=0) {
-        ++n;
+  long long int n;
+  cin >> n;
+  
+  long long int a = n % 10;
+  long long int b = n / 10 % 10;
+  
+  while(a!=0 || b!=0) {
+      
+    a = n % 10;
+    b = n / 10 % 10;
+      
+    if(a==0 && b==0) {
+      n--;
     }
-    cout << n;
-    return 0;
+    ++n;
+
+  }
+  cout << n;
+  return 0;
 }
