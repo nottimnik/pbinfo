@@ -1,29 +1,33 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-int f[6];
-char ch[256];
+
 int main()
 {
-    cin.getline(ch , 256);
-    int i = 0;
-    while(ch[i]!='\0')
-    {
-        if(ch[i]=='a' || ch[i]=='A') f[1]++;
-        else if(ch[i]=='e' || ch[i]=='E') f[2]++;
-        else if(ch[i]=='i' || ch[i]=='I') f[3]++;
-        else if(ch[i]=='o' || ch[i]=='O') f[4]++;
-        else if(ch[i]=='u' || ch[i]=='U') f[5]++;
-        i++;
-    }
-    int max=0 , val=0;
     
-    for(int i = 1 ; i <= 5 ; ++i) {
-        if(f[i]>max) max=f[i] , val=i;
+    int v[6];
+    char sir[10001];
+    cin.get(sir, 10001);
+    
+    for(int i = 0; sir[i] != '\0'; ++i) {
+        
+       if(sir[i] == 'a' || sir[i] == 'A') v[1]++;
+       else if(sir[i] == 'e' || sir[i] == 'E') v[2]++;
+       else if(sir[i] == 'i' || sir[i] == 'I') v[3]++;
+       else if(sir[i] == 'o' || sir[i] == 'O') v[4]++;
+       else if(sir[i] == 'u' || sir[i] == 'U') v[5]++;
     }
-    if(val==1) cout << 'A';
-    if(val==2) cout << 'E';
-    if(val==3) cout << 'I';
-    if(val==4) cout << 'O';
-    if(val==5) cout << 'U';
+    
+    int j = 0, max = 0;
+    
+    for (int i = 1;i<=5;++i) {
+        if(v[i] > max) max = v[i], j = i;
+    }
+    
+    if(j == 1) cout << 'A';
+    if(j == 2) cout << 'E';
+    if(j == 3) cout << 'I';
+    if(j == 4) cout << 'O';
+    if(j == 5) cout << 'U';
+
     return 0;
 }
